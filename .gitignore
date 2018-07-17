@@ -3,3 +3,6 @@ node_modules
 
 # VS code configuration
 .vscode/
+
+# Archivos de Mac
+.DS_Store
