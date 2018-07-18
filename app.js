@@ -23,8 +23,11 @@ io.on('connection', (client) => {
 
     client.on('siguienteTicket', (data, callback) => {
         let last = ticketControl.getNext();
-        console.log(last);
         callback(last);
+    });
+
+    client.emit('estadoActual', {
+        actual: ticketControl.getLast()
     });
 });
 
